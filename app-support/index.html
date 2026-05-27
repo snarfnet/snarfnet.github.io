@@ -4,63 +4,172 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>App Support - Snarfnet</title>
+<meta name="description" content="Snarfnet iOS App Support - お問い合わせ・FAQ / Contact & FAQ">
 <style>
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:720px;margin:0 auto;padding:24px 20px;color:#222;background:#fafafa;line-height:1.6}
-h1{font-size:1.6em;margin-bottom:8px}
-h2{font-size:1.2em;margin-top:32px;color:#333}
-.contact-box{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:20px;margin:20px 0}
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;max-width:760px;margin:0 auto;padding:24px 20px;color:#222;background:#fafafa;line-height:1.7}
+h1{font-size:1.7em;margin-bottom:4px;color:#111}
+h2{font-size:1.25em;margin-top:36px;color:#333;border-bottom:2px solid #e0e0e0;padding-bottom:6px}
+h3{font-size:1.05em;margin-top:20px;color:#444}
+.subtitle{color:#666;font-size:0.95em;margin-bottom:24px}
+.contact-box{background:#fff;border:1px solid #d8d8d8;border-radius:12px;padding:24px;margin:20px 0;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
 .contact-box p{margin:8px 0}
+.faq-item{background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:16px 20px;margin:12px 0}
+.faq-item strong{color:#111}
+.faq-item p{margin:6px 0 0 0}
 a{color:#0066cc;text-decoration:none}
 a:hover{text-decoration:underline}
-.lang-toggle{text-align:right;margin-bottom:16px;font-size:0.9em}
+.lang-toggle{text-align:right;margin-bottom:12px}
+.lang-toggle a{display:inline-block;padding:6px 16px;border:1px solid #ccc;border-radius:20px;font-size:0.9em;color:#555;transition:all 0.2s}
+.lang-toggle a:hover{background:#0066cc;color:#fff;border-color:#0066cc;text-decoration:none}
+.steps{counter-reset:step}
+.steps li{counter-increment:step;list-style:none;position:relative;padding-left:36px;margin:12px 0}
+.steps li::before{content:counter(step);position:absolute;left:0;top:0;width:26px;height:26px;background:#0066cc;color:#fff;border-radius:50%;text-align:center;line-height:26px;font-size:0.85em;font-weight:bold}
+.footer{margin-top:48px;padding-top:20px;border-top:1px solid #e0e0e0;color:#888;font-size:0.85em;text-align:center}
+.privacy-link{display:inline-block;margin-top:8px;padding:8px 20px;background:#f0f0f0;border-radius:8px;color:#444;font-size:0.9em}
+.privacy-link:hover{background:#e0e0e0;text-decoration:none}
+@media(max-width:480px){body{padding:16px 14px}h1{font-size:1.4em}.contact-box{padding:16px}}
 </style>
 </head>
 <body>
 
 <div class="lang-toggle"><a href="#" onclick="toggleLang();return false" id="langBtn">English</a></div>
 
+<!-- ===== 日本語 ===== -->
 <div id="ja">
-<h1>アプリサポート</h1>
-<p>Snarfnetが提供するiOSアプリのサポートページです。</p>
+<h1>Snarfnet アプリサポート</h1>
+<p class="subtitle">iOSアプリに関するお問い合わせ・サポート情報</p>
 
 <div class="contact-box">
-<h2>お問い合わせ</h2>
-<p>アプリに関するご質問、不具合の報告、ご要望は下記メールアドレスまでご連絡ください。</p>
+<h2 style="margin-top:0;border:none;padding:0">お問い合わせ</h2>
+<p>アプリに関するご質問、不具合の報告、機能のご要望は下記メールアドレスまでお気軽にご連絡ください。</p>
 <p><strong>メール:</strong> <a href="mailto:snarfnet.apps@gmail.com">snarfnet.apps@gmail.com</a></p>
-<p>通常2営業日以内にご返信いたします。</p>
+<p>通常2営業日以内にご返信します。</p>
 </div>
 
-<h2>よくある質問</h2>
-<p><strong>Q: アプリが正常に動作しません</strong><br>
-アプリを一度終了し、端末を再起動してからお試しください。問題が続く場合はメールでご連絡ください。</p>
+<h2>サポートリクエストの送り方</h2>
+<p>スムーズに対応するため、メールに以下の情報を含めてください。</p>
+<ol class="steps">
+<li><strong>アプリ名</strong> -- どのアプリについてのお問い合わせか</li>
+<li><strong>端末とOSバージョン</strong> -- 例: iPhone 15, iOS 18.2</li>
+<li><strong>問題の詳細</strong> -- 何が起きたか、どの画面で発生したか</li>
+<li><strong>スクリーンショット</strong>（あれば） -- 状況の把握に役立ちます</li>
+</ol>
 
-<p><strong>Q: 広告を非表示にできますか？</strong><br>
-アプリ内課金（広告削除）に対応しているアプリでは、設定画面から購入できます。</p>
+<h2>よくある質問（FAQ）</h2>
 
-<p><strong>Q: データの取り扱いについて</strong><br>
-各アプリのプライバシーポリシーは、App Storeの各アプリページでご確認いただけます。</p>
+<div class="faq-item">
+<strong>Q: アプリが正常に動作しません</strong>
+<p>アプリを一度完全に終了し、端末を再起動してからお試しください。それでも解決しない場合は、App Storeからアプリを最新版に更新してください。問題が続く場合はメールでご連絡ください。</p>
 </div>
 
+<div class="faq-item">
+<strong>Q: アプリが起動直後にクラッシュします</strong>
+<p>設定 > 一般 > iPhoneストレージで空き容量を確認してください。空き容量が不足しているとクラッシュする場合があります。アプリを削除して再インストールすると改善することもあります。</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: 広告を非表示にできますか？</strong>
+<p>アプリ内課金（広告削除）に対応しているアプリでは、設定画面から購入できます。購入後に広告が消えない場合は「購入を復元」ボタンをお試しください。</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: 課金を復元したい</strong>
+<p>アプリの設定画面にある「購入を復元」をタップしてください。Apple IDでサインインしていることを確認してから操作してください。復元できない場合はメールでご連絡ください。</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: アプリを間違えて購入してしまいました</strong>
+<p>App Storeでの購入の返金は、Appleが管理しています。<a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">reportaproblem.apple.com</a> から返金リクエストを送信してください。</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: 個人情報やデータの取り扱いについて</strong>
+<p>各アプリのプライバシーポリシーは、App Storeの各アプリページまたは<a href="https://snarfnet.github.io/privacy.html">プライバシーポリシーページ</a>でご確認いただけます。私たちはユーザーの個人情報を第三者に販売・共有しません。</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: 機能の追加リクエストはできますか？</strong>
+<p>はい。ご要望はメールでお送りください。すべてのリクエストを検討し、今後のアップデートの参考にします。</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: 対応しているiOSバージョンは？</strong>
+<p>各アプリの対応OSバージョンはApp Storeの「情報」セクションに記載されています。最新機能のご利用には最新のiOSを推奨します。</p>
+</div>
+
+<p style="margin-top:24px"><a href="https://snarfnet.github.io/privacy.html" class="privacy-link">プライバシーポリシーを確認する</a></p>
+</div>
+
+<!-- ===== English ===== -->
 <div id="en" style="display:none">
-<h1>App Support</h1>
-<p>Support page for iOS apps by Snarfnet.</p>
+<h1>Snarfnet App Support</h1>
+<p class="subtitle">Contact &amp; support information for our iOS apps</p>
 
 <div class="contact-box">
-<h2>Contact Us</h2>
-<p>For questions, bug reports, or feature requests, please contact us via email.</p>
+<h2 style="margin-top:0;border:none;padding:0">Contact Us</h2>
+<p>For questions, bug reports, or feature requests, feel free to reach out via email.</p>
 <p><strong>Email:</strong> <a href="mailto:snarfnet.apps@gmail.com">snarfnet.apps@gmail.com</a></p>
 <p>We typically respond within 2 business days.</p>
 </div>
 
-<h2>FAQ</h2>
-<p><strong>Q: The app isn't working properly</strong><br>
-Please close the app, restart your device, and try again. If the issue persists, contact us via email.</p>
+<h2>How to Submit a Support Request</h2>
+<p>To help us resolve your issue quickly, please include the following in your email:</p>
+<ol class="steps">
+<li><strong>App name</strong> -- which app you need help with</li>
+<li><strong>Device and OS version</strong> -- e.g., iPhone 15, iOS 18.2</li>
+<li><strong>Description of the issue</strong> -- what happened and on which screen</li>
+<li><strong>Screenshots</strong> (if possible) -- helps us understand the situation</li>
+</ol>
 
-<p><strong>Q: Can I remove ads?</strong><br>
-For apps with in-app purchase (remove ads), you can purchase it from the settings screen.</p>
+<h2>Frequently Asked Questions (FAQ)</h2>
 
-<p><strong>Q: About data handling</strong><br>
-Please check each app's privacy policy on its App Store page.</p>
+<div class="faq-item">
+<strong>Q: The app isn't working properly</strong>
+<p>Close the app completely, restart your device, and try again. If the problem persists, make sure you have the latest version from the App Store. Still having trouble? Email us.</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: The app crashes on launch</strong>
+<p>Check your available storage in Settings > General > iPhone Storage. Low storage can cause crashes. Deleting and reinstalling the app may also help.</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: Can I remove ads?</strong>
+<p>For apps that offer an in-app purchase to remove ads, you can buy it from the settings screen. If ads persist after purchase, try the "Restore Purchases" button.</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: How do I restore my purchase?</strong>
+<p>Tap "Restore Purchases" in the app's settings. Make sure you're signed in with the same Apple ID used for the original purchase. If restoration fails, contact us via email.</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: I accidentally purchased an app and want a refund</strong>
+<p>Refunds for App Store purchases are handled by Apple. Please visit <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">reportaproblem.apple.com</a> to request a refund.</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: How is my data handled?</strong>
+<p>Please review the privacy policy on each app's App Store page or visit our <a href="https://snarfnet.github.io/privacy.html">Privacy Policy page</a>. We do not sell or share personal information with third parties.</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: Can I request a new feature?</strong>
+<p>Yes! Send your ideas via email. We review all requests and consider them for future updates.</p>
+</div>
+
+<div class="faq-item">
+<strong>Q: What iOS versions are supported?</strong>
+<p>Supported OS versions are listed in the "Information" section of each app's App Store page. We recommend running the latest iOS for the best experience.</p>
+</div>
+
+<p style="margin-top:24px"><a href="https://snarfnet.github.io/privacy.html" class="privacy-link">View Privacy Policy</a></p>
+</div>
+
+<div class="footer">
+<p>&copy; 2024-2026 Snarfnet. All rights reserved.</p>
+<p><a href="https://snarfnet.github.io/">Home</a> &middot; <a href="https://snarfnet.github.io/privacy.html">Privacy Policy</a></p>
 </div>
 
 <script>
