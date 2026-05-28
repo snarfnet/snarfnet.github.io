@@ -15,7 +15,7 @@ ul { padding-left: 1.4em; }
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="date">Last updated: May 27, 2026</p>
+<p class="date">Last updated: May 28, 2026</p>
 
 <p>Snarfnet ("we", "us", "our") operates mobile applications published on the App Store. This Privacy Policy describes how we handle information when you use our apps.</p>
 
@@ -25,6 +25,17 @@ ul { padding-left: 1.4em; }
 <li><strong>Photos and Media:</strong> Some apps allow you to select photos from your device. These photos are processed locally on your device and are never uploaded to our servers.</li>
 <li><strong>Location Data:</strong> Some apps use your location to provide location-based features. Location data is processed on your device and is not stored on our servers.</li>
 <li><strong>Usage Data:</strong> We do not collect analytics or usage data directly.</li>
+<li><strong>Face Data (SymmetryCheck):</strong> The SymmetryCheck app uses Apple's Vision framework to detect facial landmarks (eyes, eyebrows, nose, mouth, jaw contour) from your device camera. All face detection and symmetry analysis runs entirely on your device. No face data leaves your device or reaches our servers. Face data exists only in temporary memory while you use the analysis feature and is discarded when you close the screen. If you choose to save a result image to your photo library, only the rendered screenshot is saved — no raw facial landmark data is embedded or stored.</li>
+</ul>
+
+<h2>Face Data (SymmetryCheck)</h2>
+<p>The SymmetryCheck app analyzes facial symmetry using Apple's Vision framework (VNDetectFaceLandmarksRequest). This section explains exactly how we handle face data.</p>
+<ul>
+<li><strong>Collection:</strong> The app captures camera frames and passes them to Apple's on-device Vision framework to detect facial landmarks — eyes, eyebrows, nose, mouth, and jaw contour. We do not collect, record, or extract biometric identifiers. The landmark coordinates are used solely to calculate symmetry scores displayed on screen.</li>
+<li><strong>Use:</strong> Face landmark data is used for one purpose only: computing and displaying a facial symmetry score in real time. No profiles are built, no face templates are created, and no identification or authentication takes place.</li>
+<li><strong>Disclosure:</strong> Face data is never shared with any third party. It is never transmitted off your device — not to our servers, not to advertisers, not to analytics providers, not to anyone.</li>
+<li><strong>Storage:</strong> Face data is held only in temporary memory during the active analysis session. It is not written to disk, not saved to a database, and not synced to iCloud. When you leave the analysis screen, the data is discarded.</li>
+<li><strong>Retention:</strong> Face data is retained for zero seconds beyond the active session. There is no persistent storage of face data. If you save a result image to your photo library, that image is a rendered screenshot showing the overlay — it contains no raw landmark coordinates or biometric data.</li>
 </ul>
 
 <h2>Third-Party Services</h2>
