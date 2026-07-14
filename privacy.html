@@ -26,6 +26,7 @@ ul { padding-left: 1.4em; }
 <li><strong>Location Data:</strong> Some apps use your location to provide location-based features. Location data is processed on your device and is not stored on our servers.</li>
 <li><strong>Usage Data:</strong> We do not collect analytics or usage data directly.</li>
 <li><strong>Face Data (SymmetryCheck):</strong> The SymmetryCheck app uses Apple's Vision framework to detect facial landmarks (eyes, eyebrows, nose, mouth, jaw contour) from your device camera. All face detection and symmetry analysis runs entirely on your device. No face data leaves your device or reaches our servers. Face data exists only in temporary memory while you use the analysis feature and is discarded when you close the screen. If you choose to save a result image to your photo library, only the rendered screenshot is saved — no raw facial landmark data is embedded or stored.</li>
+<li><strong>Face Data (AtamaScouter):</strong> The AtamaScouter app uses Apple's on-device face position detection (AVCaptureMetadataOutput) to find the location of a face in the camera view so it can float a random, meaningless number above the head. It detects only the position (bounding box) of a face — no facial landmarks, facial geometry, or biometric identifiers are collected. No face data leaves your device or reaches our servers, and nothing is stored. See the dedicated section below.</li>
 </ul>
 
 <h2>Face Data (SymmetryCheck)</h2>
@@ -36,6 +37,16 @@ ul { padding-left: 1.4em; }
 <li><strong>Disclosure:</strong> Face data is never shared with any third party. It is never transmitted off your device — not to our servers, not to advertisers, not to analytics providers, not to anyone.</li>
 <li><strong>Storage:</strong> Face data is held only in temporary memory during the active analysis session. It is not written to disk, not saved to a database, and not synced to iCloud. When you leave the analysis screen, the data is discarded.</li>
 <li><strong>Retention:</strong> Face data is retained for zero seconds beyond the active session. There is no persistent storage of face data. If you save a result image to your photo library, that image is a rendered screenshot showing the overlay — it contains no raw landmark coordinates or biometric data.</li>
+</ul>
+
+<h2>Face Data (AtamaScouter)</h2>
+<p>The AtamaScouter app is a novelty camera app that floats a random, meaningless number above a person's head in the live camera view. This section explains exactly how it handles face data.</p>
+<ul>
+<li><strong>Collection:</strong> The app uses Apple's on-device <code>AVCaptureMetadataOutput</code> with the face metadata type, which reports only the rectangular position (bounding box) of a face in the current camera frame. It does not capture, extract, or store facial landmarks, facial geometry, or any biometric identifier. No face images are recorded.</li>
+<li><strong>Use:</strong> The face position is used for one purpose only: to place a decorative, randomly generated number above the detected head in real time. The number is derived from a temporary tracking ID and has no meaning. No profiles are built, no face templates are created, and no identification or authentication takes place.</li>
+<li><strong>Disclosure:</strong> Face data is never shared with any third party. It is never transmitted off your device — not to our servers, not to advertisers, not to analytics providers, not to anyone.</li>
+<li><strong>Storage:</strong> Face position data exists only in temporary memory while the camera is active. It is not written to disk, not saved to a database, and not synced to iCloud.</li>
+<li><strong>Retention:</strong> Face data is retained for zero seconds beyond the live camera view. There is no persistent storage of face data. If you save or share a screenshot, that image is a rendered picture of the camera view with the number overlay — it contains no facial landmark data or biometric information.</li>
 </ul>
 
 <h2>Third-Party Services</h2>
