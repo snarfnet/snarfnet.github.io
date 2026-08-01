@@ -15,7 +15,7 @@ ul { padding-left: 1.4em; }
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="date">Last updated: May 28, 2026</p>
+<p class="date">Last updated: August 1, 2026</p>
 
 <p>Snarfnet ("we", "us", "our") operates mobile applications published on the App Store. This Privacy Policy describes how we handle information when you use our apps.</p>
 
@@ -47,6 +47,17 @@ ul { padding-left: 1.4em; }
 <li><strong>Disclosure:</strong> Face data is never shared with any third party. It is never transmitted off your device — not to our servers, not to advertisers, not to analytics providers, not to anyone.</li>
 <li><strong>Storage:</strong> Face position data exists only in temporary memory while the camera is active. It is not written to disk, not saved to a database, and not synced to iCloud.</li>
 <li><strong>Retention:</strong> Face data is retained for zero seconds beyond the live camera view. There is no persistent storage of face data. If you save or share a screenshot, that image is a rendered picture of the camera view with the number overlay — it contains no facial landmark data or biometric information.</li>
+</ul>
+
+<h2>Face Data (World Dress Camera / 民族衣装カメラ)</h2>
+<p>World Dress Camera lets a user place a traditional costume overlay on a full-body photo. The optional "Show face and hair in front of costume" feature uses Apple's Vision framework (<code>VNDetectFaceRectanglesRequest</code>) entirely on the device. This section explains the app's collection, use, sharing, storage, retention, and deletion practices for face data.</p>
+<ul>
+<li><strong>Face data processed:</strong> The app processes the user-selected or camera-captured photo and obtains only the rectangular location and size of the largest detected face (a face bounding box). It does not detect facial landmarks, facial geometry, expressions, identity, or biometric identifiers. It does not create a face template or profile.</li>
+<li><strong>Use:</strong> The temporary face bounding box is used only to create an oval crop containing the face and surrounding hair. That crop is drawn in front of the costume overlay so the composite looks natural. Face data is not used for identification, authentication, advertising, analytics, tracking, profiling, or any other purpose.</li>
+<li><strong>Sharing and disclosure:</strong> Face data and photos are not sent off the device and are not shared with us or any third party. The app has no server upload for this feature and does not provide face data to advertisers, analytics services, data brokers, or other external services.</li>
+<li><strong>Storage:</strong> The face bounding box and temporary face-and-hair crop exist only in the app's volatile memory while the selected photo is being edited. They are not written to disk, saved in a database, included in logs, backed up, or synced to iCloud.</li>
+<li><strong>Retention and deletion:</strong> Face data is retained only for the active editing session and for zero seconds after the photo is replaced, the editor is closed, or the app is terminated. It is then discarded automatically from memory. Because no face data is persistently stored, there is no stored face data requiring a separate deletion request.</li>
+<li><strong>User-saved image:</strong> If the user taps Save, the app saves only the final rendered composite image to the user's own Photos library after permission is granted. The saved image contains visible pixels from the original photo and costume overlay; it does not contain the face bounding box, facial measurements, landmarks, templates, or biometric metadata. The user controls and can delete that image through the Photos app.</li>
 </ul>
 
 <h2>Third-Party Services</h2>
